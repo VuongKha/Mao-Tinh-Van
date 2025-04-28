@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mao Tinh Vân: Câu chuyện bi thảm về áp lực ngành công nghệ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: calc(100% - 24px);
+            width: 2px;
+            background: #e5e7eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-laptop-code text-blue-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">TechMind</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="text-blue-600 px-3 py-2 text-sm font-medium">Trang chủ</a>
+                    <a href="#story" class="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">Câu chuyện</a>
+                    <a href="#pressures" class="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">Áp lực</a>
+                    <a href="#solutions" class="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">Giải pháp</a>
+                    <a href="#resources" class="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">Hỗ trợ</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="bg-blue-50 text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Trang chủ</a>
+                <a href="#story" class="text-gray-500 hover:text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Câu chuyện</a>
+                <a href="#pressures" class="text-gray-500 hover:text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Áp lực</a>
+                <a href="#solutions" class="text-gray-500 hover:text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Giải pháp</a>
+                <a href="#resources" class="text-gray-500 hover:text-gray-700 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium">Hỗ trợ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Mao Tinh Vân: Hồi chuông cảnh tỉnh
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-xl">
+                    Câu chuyện đau lòng về áp lực công việc, sức khỏe tinh thần và mặt tối của ngành công nghệ Trung Quốc
+                </p>
+                <div class="mt-10 flex justify-center space-x-4">
+                    <a href="#story" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-700 bg-white hover:bg-blue-50">
+                        Đọc câu chuyện
+                    </a>
+                    <a href="#solutions" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 bg-opacity-60 hover:bg-opacity-70">
+                        Tìm giải pháp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Facts Section -->
+    <div class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Sự thật quan trọng</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Thực trạng khắc nghiệt của ngành công nghệ
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="bg-gray-50 rounded-lg shadow-sm p-6 transition duration-300 ease-in-out card-hover">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i class="fas fa-clock text-xl"></i>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-lg font-medium text-gray-900">Văn hóa 996</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                9h sáng đến 9h tối, 6 ngày/tuần - lịch làm việc khắc nghiệt phổ biến trong ngành công nghệ Trung Quốc.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-lg shadow-sm p-6 transition duration-300 ease-in-out card-hover">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
+                            <i class="fas fa-heartbeat text-xl"></i>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-lg font-medium text-gray-900">Khủng hoảng sức khỏe tâm thần</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                173 triệu người Trung Quốc có rối loạn tâm thần, nhưng 90% không bao giờ tìm kiếm điều trị do kỳ thị.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-lg shadow-sm p-6 transition duration-300 ease-in-out card-hover">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white">
+                            <i class="fas fa-brain text-xl"></i>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-lg font-medium text-gray-900">Tình hình Việt Nam</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                15-30% dân số Việt Nam cần dịch vụ sức khỏe tâm thần, nhưng nguồn lực rất hạn chế.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-lg shadow-sm p-6 transition duration-300 ease-in-out card-hover">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                            <i class="fas fa-balance-scale text-xl"></i>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-lg font-medium text-gray-900">Mất cân bằng cuộc sống</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Người lao động Trung Quốc chỉ có trung bình 2.27 giờ rảnh mỗi ngày - ít hơn nhiều so với các nước phương Tây.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mao's Story Section -->
+    <div id="story" class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                    <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Bi kịch</h2>
+                    <h1 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        Mao Tinh Vân: Thiên tài ra đi quá sớm
+                    </h1>
+                    <p class="mt-3 text-lg text-gray-500">
+                        Mao Tinh Vân (Mao Xingyun) là một thiên tài lập trình tại Tencent Timi F1 Studio, nổi tiếng với kỹ năng xuất sắc trong phát triển đồ họa game. Cái chết đột ngột của anh ở tuổi 30 vào ngày 11/12/2021 đã gây chấn động cộng đồng công nghệ Trung Quốc.
+                    </p>
+                    <div class="mt-8">
+                        <div class="inline-flex rounded-md shadow">
+                            <a href="#pressures" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                                Hiểu về áp lực
+                                <i class="fas fa-arrow-down ml-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+                    <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+                        <div class="relative block w-full bg-white rounded-lg overflow-hidden">
+                            <img class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Môi trường công nghệ">
+                            <div class="absolute inset-0 bg-blue-700 opacity-25"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center px-4">
+                                    <h3 class="text-2xl font-bold text-white">"Cái chết của anh ấy là hồi chuông cảnh tỉnh cho toàn ngành"</h3>
+                                    <p class="mt-2 text-white">— Winco Qin, đồng nghiệp của Mao</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Dòng thời gian</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Sự nghiệp và bi kịch của Mao Tinh Vân
+                </p>
+            </div>
+
+            <div class="mt-10 relative">
+                <div class="space-y-8">
+                    <!-- Timeline Item 1 -->
+                    <div class="relative timeline-item pl-8">
+                        <div class="absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-white">
+                            <span class="text-xs font-bold">1</span>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-medium text-gray-900">Khởi nghiệp</h3>
+                            <time class="text-sm text-gray-500">Những năm 2010</time>
+                            <p class="mt-2 text-gray-600">
+                                Mao gia nhập Tencent Timi Studio danh tiếng, nhanh chóng thăng tiến nhờ kỹ năng lập trình xuất sắc trong phát triển đồ họa game.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="relative timeline-item pl-8">
+                        <div class="absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-white">
+                            <span class="text-xs font-bold">2</span>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-medium text-gray-900">Vị trí lãnh đạo</h3>
+                            <time class="text-sm text-gray-500">2018-2021</time>
+                            <p class="mt-2 text-gray-600">
+                                Trở thành Trưởng nhóm Lập trình Đồ họa tại Timi F1 Studio, dẫn dắt các dự án game lớn dưới áp lực và deadline khắc nghiệt.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="relative timeline-item pl-8">
+                        <div class="absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-white">
+                            <span class="text-xs font-bold">3</span>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-medium text-gray-900">Cái chết bi thảm</h3>
+                            <time class="text-sm text-gray-500">11 tháng 12, 2021</time>
+                            <p class="mt-2 text-gray-600">
+                                Mao qua đời đột ngột ở tuổi 30. Dù Tencent không công bố nguyên nhân chính thức, đồng nghiệp cho rằng áp lực công việc và có thể là trầm cảm đóng vai trò quan trọng.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="relative timeline-item pl-8">
+                        <div class="absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-white">
+                            <span class="text-xs font-bold">4</span>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="text-lg font-medium text-gray-900">Phản ứng của ngành</h3>
+                            <time class="text-sm text-gray-500">2022</time>
+                            <p class="mt-2 text-gray-600">
+                                Cái chết của Mao đã khơi dậy cuộc thảo luận rộng rãi về văn hóa làm việc "996" khắc nghiệt (9h sáng-9h tối, 6 ngày/tuần) và sức khỏe tinh thần trong ngành công nghệ.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pressures Section -->
+    <div id="pressures" class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-400 font-semibold tracking-wide uppercase">Áp lực ngành</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                    Văn hóa làm việc độc hại đằng sau bi kịch
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-300 lg:mx-auto">
+                    Câu chuyện của Mao không phải cá biệt - nó phản ánh vấn đề hệ thống trong ngành công nghệ toàn cầu.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                    <div class="relative bg-gray-800 p-6 rounded-lg">
+                        <div class="absolute -top-4 -left-4 h-10 w-10 rounded-full bg-blue-500 flex items-center justify-center">
+                            <i class="fas fa-calendar-times"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2">Lịch làm việc "996"</h3>
+                        <p class="mt-2 text-gray-300">
+                            Lịch làm việc khắc nghiệt 9h sáng-9h tối, 6 ngày/tuần phổ biến trong ngành công nghệ Trung Quốc. Khảo sát 2018 cho thấy người lao động Trung Quốc chỉ có trung bình 2.27 giờ rảnh mỗi ngày - ít hơn nhiều so với các nước phương Tây.
+                        </p>
+                    </div>
+
+                    <div class="relative bg-gray-800 p-6 rounded-lg">
+                        <div class="absolute -top-4 -left-4 h-10 w-10 rounded-full bg-red-500 flex items-center justify-center">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2">Cạnh tranh khốc liệt</h3>
+                        <p class="mt-2 text-gray-300">
+                            Nhân viên công nghệ phải liên tục học kỹ năng mới trong khi cạnh tranh với đồng nghiệp. Chỉ số hiệu suất tạo áp lực lớn, khiến nhiều người cảm thấy không đủ năng lực so với đồng nghiệp giàu kinh nghiệm hơn.
+                        </p>
+                    </div>
+
+                    <div class="relative bg-gray-800 p-6 rounded-lg">
+                        <div class="absolute -top-4 -left-4 h-10 w-10 rounded-full bg-yellow-500 flex items-center justify-center">
+                            <i class="fas fa-hourglass-end"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2">Deadline nghiệt ngã</h3>
+                        <p class="mt-2 text-gray-300">
+                            Phát triển game (lĩnh vực của Mao) đặc biệt chịu áp lực deadline. Các dự án thường yêu cầu "thời gian cao điểm" với giờ làm kéo dài, dẫn đến kiệt sức và vấn đề sức khỏe.
+                        </p>
+                    </div>
+
+                    <div class="relative bg-gray-800 p-6 rounded-lg">
+                        <div class="absolute -top-4 -left-4 h-10 w-10 rounded-full bg-green-500 flex items-center justify-center">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-white mb-2">Mất cân bằng cuộc sống</h3>
+                        <p class="mt-2 text-gray-300">
+                            Giờ làm dài khiến ít thời gian cho gia đình hoặc chăm sóc bản thân. Nhiều nhân viên công nghệ mô tả cảm giác như công nhân dây chuyền hơn là chuyên gia sáng tạo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mental Health Impact Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                    <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Khủng hoảng sức khỏe tâm thần</h2>
+                    <h1 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        Tác động tiềm ẩn của áp lực ngành công nghệ
+                    </h1>
+                    <p class="mt-3 text-lg text-gray-500">
+                        Yêu cầu khắc nghiệt của ngành công nghệ gây tổn hại nghiêm trọng đến sức khỏe tâm thần toàn cầu, đặc biệt nghiêm trọng ở châu Á do kỳ thị văn hóa.
+                    </p>
+                </div>
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+                    <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md overflow-hidden">
+                        <div class="bg-white p-6">
+                            <div class="mb-6">
+                                <h3 class="text-lg font-medium text-gray-900 mb-2">Thống kê sức khỏe tâm thần Trung Quốc</h3>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="flex items-center mb-3">
+                                        <div class="flex-shrink-0 h-5 w-5 text-blue-500">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="ml-3 text-sm text-gray-600">
+                                            <span class="font-medium">173 triệu</span> người trưởng thành có rối loạn tâm thần
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mb-3">
+                                        <div class="flex-shrink-0 h-5 w-5 text-red-500">
+                                            <i class="fas fa-procedures"></i>
+                                        </div>
+                                        <div class="ml-3 text-sm text-gray-600">
+                                            <span class="font-medium">90%</span> không bao giờ tìm điều trị do kỳ thị
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-5 w-5 text-yellow-500">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <div class="ml-3 text-sm text-gray-600">
+                                            <span class="font-medium">50%</span> nhân viên công nghệ báo cáo kiệt sức
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-900 mb-2">Thách thức tại Việt Nam</h3>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="flex items-center mb-3">
+                                        <div class="flex-shrink-0 h-5 w-5 text-green-500">
+                                            <i class="fas fa-user-md"></i>
+                                        </div>
+                                        <div class="ml-3 text-sm text-gray-600">
+                                            Chỉ <span class="font-medium">0.91</span> bác sĩ tâm thần trên 100,000 dân
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mb-3">
+                                        <div class="flex-shrink-0 h-5 w-5 text-purple-500">
+                                            <i class="fas fa-comment-medical"></i>
+                                        </div>
+                                        <div class="ml-3 text-sm text-gray-600">
+                                            Bệnh tâm thần thường bị gọi là "<span class="font-medium">điên</span>" - tạo ra sự kỳ thị
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-5 w-5 text-pink-500">
+                                            <i class="fas fa-laptop-house"></i>
+                                        </div>
+                                        <div class="ml-3 text-sm text-gray-600">
+                                            <span class="font-medium">62%</span> báo cáo mất việc trong đại dịch COVID-19
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Solutions Section -->
+    <div id="solutions" class="bg-blue-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Giải pháp</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Xây dựng môi trường công nghệ lành mạnh hơn
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                    Bi kịch của Mao dạy chúng ta phải ưu tiên sức khỏe tinh thần trong ngành công nghệ.
+                </p>
+            </div>
+
+            <div class="mt-12">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="pt-6">
+                        <div class="flow-root bg-white rounded-lg px-6 pb-8 h-full shadow-sm transition duration-300 ease-in-out card-hover">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Từ bỏ văn hóa 996</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Các công ty phải từ bỏ lịch làm việc khắc nghiệt. Năng suất bền vững đòi hỏi giờ làm hợp lý và nghỉ ngơi đầy đủ.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <div class="flow-root bg-white rounded-lg px-6 pb-8 h-full shadow-sm transition duration-300 ease-in-out card-hover">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mx-auto">
+                                    <i class="fas fa-heart text-xl"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Hỗ trợ sức khỏe tâm thần</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Cung cấp dịch vụ tư vấn, ngày nghỉ sức khỏe tâm thần, tạo môi trường không kỳ thị để nhân viên an tâm tìm kiếm giúp đỡ.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <div class="flow-root bg-white rounded-lg px-6 pb-8 h-full shadow-sm transition duration-300 ease-in-out card-hover">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white mx-auto">
+                                    <i class="fas fa-balance-scale-right text-xl"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Cân bằng cuộc sống</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Khuyến khích nhân viên ngắt kết nối sau giờ làm. Tôn trọng thời gian cá nhân và cam kết gia đình.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <div class="flow-root bg-white rounded-lg px-6 pb-8 h-full shadow-sm transition duration-300 ease-in-out card-hover">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white mx-auto">
+                                    <i class="fas fa-comments text-xl"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Đối thoại cởi mở</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Tạo kênh để nhân viên thảo luận về căng thẳng và khối lượng công việc mà không sợ bị phán xét hay trả thù.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <div class="flow-root bg-white rounded-lg px-6 pb-8 h-full shadow-sm transition duration-300 ease-in-out card-hover">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white mx-auto">
+                                    <i class="fas fa-chart-line text-xl"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Kỳ vọng thực tế</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Đặt deadline và phạm vi dự án khả thi. Nhận ra rằng công việc chất lượng cần thời gian và không thể bị thúc ép vô hạn.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <div class="flow-root bg-white rounded-lg px-6 pb-8 h-full shadow-sm transition duration-300 ease-in-out card-hover">
+                            <div class="-mt-6">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white mx-auto">
+                                    <i class="fas fa-hands-helping text-xl"></i>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Hỗ trợ đồng nghiệp</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    Đào tạo nhân viên nhận biết dấu hiệu đau khổ ở đồng nghiệp và cung cấp hỗ trợ, giới thiệu phù hợp.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-blue-700">
+        <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                <span class="block">Tham gia phong trào</span>
+                <span class="block">Vì môi trường công nghệ lành mạnh hơn</span>
+            </h2>
+            <p class="mt-4 text-lg leading-6 text-blue-200">
+                Câu chuyện của Mao không nên lặp lại. Cùng nhau chúng ta có thể tạo ra thay đổi.
+            </p>
+            <a href="#resources" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 sm:w-auto">
+                Tham gia ngay
+                <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Resources Section -->
+    <div id="resources" class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Tài nguyên</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Thông tin hỗ trợ và giúp đỡ
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Nếu bạn hoặc người quen đang gặp khó khăn, những nguồn này có thể giúp ích.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                    <div class="relative bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Đường dây nóng quốc tế</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-green-500 mt-1">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <p class="ml-3 text-base text-gray-600">
+                                    <span class="font-medium">Befrienders Worldwide:</span> Tìm đường dây nóng tại nước bạn <a href="https://www.befrienders.org/" class="text-blue-600 hover:text-blue-800">www.befrienders.org</a>
+                                </p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-blue-500 mt-1">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <p class="ml-3 text-base text-gray-600">
+                                    <span class="font-medium">Hiệp hội Phòng chống Tự tử Quốc tế:</span> <a href="https://www.iasp.info/resources/Crisis_Centres/" class="text-blue-600 hover:text-blue-800">Danh bạ trung tâm khủng hoảng toàn cầu</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="relative bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Nguồn lực Trung Quốc</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-red-500 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <p class="ml-3 text-base text-gray-600">
+                                    <span class="font-medium">Trung tâm Nghiên cứu và Phòng chống Tự tử Bắc Kinh:</span> 010-8295-1332 (24/7)
+                                </p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-yellow-500 mt-1">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <p class="ml-3 text-base text-gray-600">
+                                    <span class="font-medium">Lifeline Thượng Hải:</span> 021-6279-8990 (10h sáng-10h tối hàng ngày)
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="relative bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Nguồn lực Việt Nam</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-green-500 mt-1">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <p class="ml-3 text-base text-gray-600">
+                                    <span class="font-medium">Đường dây nóng quốc gia:</span> 111 hoặc 18001567 (bảo vệ trẻ em)
+                                </p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-purple-500 mt-1">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <p class="ml-3 text-base text-gray-600">
+                                    <span class="font-medium">Trung tâm Tư vấn Tâm Sáng:</span> 0977.729.396 (Hà Nội)
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="relative bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-medium text-gray-900 mb-4">Hỗ trợ trực tuyến</h3>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 h-5 w-5 text-blue-500 mt-1">
+                                            <i class="fas fa-comment-dots"></i>
+                                        </div>
+                                        <p class="ml-3 text-base text-gray-600">
+                                            <span class="font-medium">7 Cups:</span> Trò chuyện trực tuyến miễn phí với người lắng nghe được đào tạo <a href="https://www.7cups.com/" class="text-blue-600 hover:text-blue-800">www.7cups.com</a>
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 h-5 w-5 text-pink-500 mt-1">
+                                            <i class="fas fa-mobile-alt"></i>
+                                        </div>
+                                        <p class="ml-3 text-base text-gray-600">
+                                            <span class="font-medium">Ứng dụng chánh niệm:</span> Headspace, Calm, hoặc Insight Timer để giảm căng thẳng
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <div class="flex items-center">
+                        <i class="fas fa-laptop-code text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-white">TechMind</span>
+                    </div>
+                    <p class="text-gray-300 text-base">
+                        Nâng cao nhận thức về sức khỏe tâm thần trong ngành công nghệ từ năm 2022.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Điều hướng
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Trang chủ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#story" class="text-base text-gray-400 hover:text-white">
+                                        Câu chuyện Mao
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#pressures" class="text-base text-gray-400 hover:text-white">
+                                        Áp lực ngành
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Tài nguyên
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#solutions" class="text-base text-gray-400 hover:text-white">
+                                        Giải pháp
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#resources" class="text-base text-gray-400 hover:text-white">
+                                        Hỗ trợ & Giúp đỡ
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Pháp lý
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Chính sách bảo mật
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Điều khoản sử dụng
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Liên hệ
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Email chúng tôi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Đóng góp
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-base text-gray-400 text-center">
+                    &copy; 2023 TechMind. Đã đăng ký bản quyền.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
